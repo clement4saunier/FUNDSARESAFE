@@ -1,4 +1,6 @@
 .card {
     background-color: var(--color-theme-main);
     padding: var(--space-large);
+    border-radius: var(--radius-large);
+    /* height: 20%; */
 }
