@@ -1,12 +1,15 @@
 import React from "react";
+import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { WalletContext } from "../context/Wallet";
 import styles from "./Header.module.css";
+import useWalletRequest from '../hooks/useWalletRequest';
 
 export default function Header() {
   let navigate = useNavigate();
   let location = useLocation();
-
-  console.log(location);
+  const {account} = useContext(WalletContext);
+  const {requestAccounts} = useWalletRequest();
 
   function onFundButton() {
     navigate("/funding");
@@ -49,7 +52,11 @@ export default function Header() {
           CREATE
         </button>
       </div>
-      <div>//Identity</div>
+      <div>
+          <button onClick={requestAccounts}>
+              {account ?? "Connect Wallet"}
+          </button>
+      </div>
     </header>
   );
 }
