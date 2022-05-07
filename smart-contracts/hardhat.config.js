@@ -18,4 +18,20 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  networks: {
+    rinkeby: {
+      url: "https://rinkeby.infura.io/v3/c48c0faf214945cc805bf64d3249f4d3",
+      accounts: ["292f5c3c0fbb6d62d7992d6f2ec398757246ec83f79065dc3cf500c8c5447dc8"],
+      gasPrice: "auto",
+      gasMultiplier: 5,
+      gas: "auto"
+    },
+    ropsten: {
+      url: "https://ropsten.infura.io/v3/c48c0faf214945cc805bf64d3249f4d3",
+      accounts: ["292f5c3c0fbb6d62d7992d6f2ec398757246ec83f79065dc3cf500c8c5447dc8"],
+      gasPrice: "auto",
+      gasMultiplier: 5,
+      gas: "auto"
+    }
+  }, 
 };

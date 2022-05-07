@@ -6,6 +6,7 @@
   --color-theme-third: #ffd759;
   --color-text-main: white;
   --color-text-second: #606060;
+  --color-border-light: #7a7a7a1c;
   --space-small: 4px; 
   --space-medium: 8px; 
   --space-large: 12px; 
@@ -60,4 +61,17 @@ button:hover {
 h1, h2, h3 {
   font-family: 'Frankfurter';
   font-weight: 300;
+}
+
+input {
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-medium);
+  background-color: transparent;
+  backdrop-filter: brightness(120%);
+  padding: var(--space-small);
+  margin-inline: var(--space-small);
+}
+
+input::placeholder {
+  color: var(--color-text-main);
 }

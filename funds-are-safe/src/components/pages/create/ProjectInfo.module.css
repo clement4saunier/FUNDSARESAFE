@@ -1,0 +1,16 @@
+.projectInfo {
+    background-color: var(--color-theme-main);
+    padding: var(--space-medium);
+    display: flex;
+    border-radius: var(--radius-medium);
+    width: 100%;
+}
+
+.projectInfo >*:first-child {
+    width: 30%;
+}
+
+.projectInfo h3 {
+    margin-bottom: var(--space-small);
+    margin-top: var(--space-small);
+}
