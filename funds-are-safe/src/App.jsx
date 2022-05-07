@@ -5,6 +5,7 @@ import Create from "./components/pages/Create";
 import Home from "./components/pages/Home";
 import Funding from "./components/pages/Funding";
 import Details from "./components/pages/Details";
+import Pitch from "./components/pages/Pitch";
 import useWallet from "./components/hooks/useWallet";
 import { WalletContext } from "./components/context/Wallet";
 import Contract from "./components/pages/Contract";
@@ -32,6 +33,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/pitch" element={<Pitch />} />
             <Route path="/funding" element={<Funding />} />
             <Route path="/funding/:contract" element={<Details />} />
             <Route path="/contract" element={<Contract />} />
