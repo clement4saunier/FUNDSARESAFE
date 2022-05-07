@@ -1,18 +1,23 @@
+import { BigNumber } from "ethers";
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import styles from "./Card.module.css"
+import styles from "./Card.module.css";
 
-export default function Card() {
-    let navigate = useNavigate();
+export default function Card({
+  project: [metadata, ongoing, token, goal, fund]
+}) {
 
-    function onCard() {
-        navigate("/pitch");
-    }
-    return (
-        <div className={styles.card}
-        onClick={onCard}>            
-            <h2>Title</h2>
-            <p>This project aims to become the...</p>
-        </div>
-    )
+  return (
+    <div className={styles.card}>
+      <h2></h2>
+      <p>
+        metadata: {metadata}
+        <br />
+        ongoing: {ongoing ? "true" : "false"}
+        <br />
+        token: {token}
+        <br />
+        funding: {BigNumber.from(fund).toString()}/{BigNumber.from(goal).toString()}
+      </p>
+    </div>
+  );
 }
