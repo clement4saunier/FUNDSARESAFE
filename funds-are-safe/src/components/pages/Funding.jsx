@@ -5,10 +5,7 @@ import List from "../project/List";
 export default function Funding() {
     return (
         <Page>
-            FUNDING PAGE
-            <br/>
-            See every fundings
-            <h1>Projects</h1>
+            <h1>PROJECTS</h1>
             <List/>
         </Page>
     )

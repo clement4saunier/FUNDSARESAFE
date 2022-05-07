@@ -26,8 +26,21 @@ header >*:last-child {
     padding-right: var(--space-large);
 }
 
+header h2 {
+  font-family: 'Frankfurter';
+  font-weight: 500;
+}
+
+header h2 > a {
+    color: var(--color-theme-main);
+}
+
 .selected {
     border-color: var(--color-theme-main);
+}
+
+button.selected {
+    background-color: var(--color-theme-main);
 }
 
 .casual {

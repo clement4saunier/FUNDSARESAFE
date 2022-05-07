@@ -3,13 +3,13 @@ import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { WalletContext } from "../context/Wallet";
 import styles from "./Header.module.css";
-import useWalletRequest from '../hooks/useWalletRequest';
+import useWalletRequest from "../hooks/useWalletRequest";
 
 export default function Header() {
   let navigate = useNavigate();
   let location = useLocation();
-  const {account} = useContext(WalletContext);
-  const {requestAccounts} = useWalletRequest();
+  const { account } = useContext(WalletContext);
+  const { requestAccounts } = useWalletRequest();
 
   function onFundButton() {
     navigate("/funding");
@@ -32,7 +32,10 @@ export default function Header() {
         onClick={onTitleButton}
         style={{ cursor: "pointer" }}
       >
-        FUNDSARESAFE
+        <h2>
+          <a>QUICK</a>
+          STARTER
+        </h2>
       </div>
       <div>
         <button
@@ -53,9 +56,7 @@ export default function Header() {
         </button>
       </div>
       <div>
-          <button onClick={requestAccounts}>
-              {account ?? "Connect Wallet"}
-          </button>
+        <button onClick={requestAccounts}>{account ?? "Connect Wallet"}</button>
       </div>
     </header>
   );
