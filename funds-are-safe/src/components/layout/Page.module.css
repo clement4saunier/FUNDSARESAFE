@@ -4,6 +4,6 @@
 }
 
 .page > * {
-  width: min(100% - var(--space-medium) * 2, 1650px);
+  width: min(100% - var(--space-medium) * 2, 1400px);
   margin-inline: auto;
 }

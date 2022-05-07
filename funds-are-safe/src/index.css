@@ -12,7 +12,7 @@
   --space-large: 12px; 
   --radius-small: 4px;
   --radius-medium: 8px;
-  --radius-large: 12px;
+  --radius-large: 25px;
 }
 
 @font-face {
@@ -37,6 +37,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://cdn.discordapp.com/attachments/969910142688706600/972559001923493888/wallpaper.webp");
+  background-size: cover;
   background-color: var(--color-background-main);
   color: var(--color-text-main);
   background-image: url("../wallpaper.webp");
