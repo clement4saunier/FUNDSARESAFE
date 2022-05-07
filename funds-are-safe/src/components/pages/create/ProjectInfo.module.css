@@ -8,6 +8,8 @@
 
 .projectInfo >*:first-child {
     width: 30%;
+    display: flex;
+    flex-direction: column;
 }
 
 .projectInfo h3 {
