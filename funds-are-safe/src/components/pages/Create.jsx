@@ -4,6 +4,8 @@ import { WalletContext } from "../context/Wallet";
 import { useContext } from "react";
 import FormField from "../project/FormField";
 import Select from 'react-select';
+import styles from './Create.module.css'
+import ProjectInfo from "./create/ProjectInfo";
 
 export default function Create() {
     const { account } = useContext(WalletContext);
@@ -16,7 +18,14 @@ export default function Create() {
     if (account) {
         return (
             <Page>
-                Form to create a crowfunding<br /><br />
+                <h1>LAUNCH YOUR PROJECT!</h1>
+                Enter the following details
+                <br />
+                <ProjectInfo/>
+                <input className={styles.input} placeholder="Project name"/>
+                <input className={styles.input} placeholder="Goal"/>
+                <input className={styles.input} placeholder="Goal"/>
+                <br />
                 <form >
                     <FormField type="text" name="Name" width="162%" title=" Project name :" display="inline-block" /><br />
                     <FormField type="text" name="Name" width="162%" title=" Description :" display="inline-block" /><br />
