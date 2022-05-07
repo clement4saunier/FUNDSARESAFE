@@ -1,0 +1,9 @@
+.page {
+  height: 100vh;
+  overflow: auto;
+}
+
+.page > * {
+  width: min(100% - var(--space-medium) * 2, 1000px);
+  margin-inline: auto;
+}

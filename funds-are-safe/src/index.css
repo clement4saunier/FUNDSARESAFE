@@ -6,6 +6,9 @@
   --space-small: 4px; 
   --space-medium: 8px; 
   --space-large: 12px; 
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
 }
 
 code {
@@ -22,4 +25,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background-main);
   color: var(--color-text-main);
+}
+
+button {
+  color: var(--color-text-main);
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-background-border);
+  padding: var(--space-medium);
+  padding-left: var(--space-large);
+  padding-right: var(--space-large);
+  margin-left: var(--space-small);
+  margin-right: var(--space-small);
+}
+
+button:hover:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+  backdrop-filter: brightness(150%);
+  cursor: pointer;
 }
