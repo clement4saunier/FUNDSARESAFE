@@ -36,6 +36,11 @@ contract Funding {
     ) public {
         project[_id.current()] = Project(metadata, true, token, goal, 0);
         builder[_id.current()] = msg.sender;
+        _id.increment();
+    }
+
+    function projectSupply() public view returns (uint256) {
+        return (_id.current());
     }
 
     function fund(uint256 projectId, uint256 amount) public {
