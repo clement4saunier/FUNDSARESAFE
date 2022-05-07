@@ -20,6 +20,11 @@
   src: url("../public/fonts/FrankfurterPlain.otf");
 }
 
+.fa {
+  font-family: 'Century Gothic';
+  src: url('https://kinsta.com/blog/web-safe-fonts/#8-century-gothic');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
@@ -34,6 +39,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background-main);
   color: var(--color-text-main);
+  background-image: url("../wallpaper.webp");
 }
 
 button {

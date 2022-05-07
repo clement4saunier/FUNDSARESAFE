@@ -7,7 +7,6 @@ import Select from 'react-select';
 import styles from './Create.module.css'
 import ProjectInfo from "./create/ProjectInfo";
 
-
 export default function Create() {
     const { account } = useContext(WalletContext);
     console.log("adresse = ", account);
@@ -23,16 +22,20 @@ export default function Create() {
                 Enter the following details
                 <br />
                 <ProjectInfo/>
-                <input className={styles.input} placeholder="Project name"/>
+                {/* <input className={styles.input} placeholder="Project name"/>
                 <input className={styles.input} placeholder="Goal"/>
-                <input className={styles.input} placeholder="Goal"/>
+                <input className={styles.input} placeholder="Goal"/> */}
                 <br />
-                <form >
+                {/* <form >
                     <FormField type="text" name="Name" width="162%" title=" Project name :" display="inline-block" /><br />
                     <FormField type="text" name="Name" width="162%" title=" Description :" display="inline-block" /><br />
                     <FormField type="number" name="Name" width="100%" title="Goal :" display="inline-block" />
                     <FormField type="text" name="Name" width="100%" title="token :" display="inline-block" marginLeft="2%" /> <br />
                     <input class="button-64" type="file" style={{ marginBottom: "1.5%" }} />
+
+                    
+
+
 
                     <Select options={options} style={{color: "white"}}
                         theme={(theme) => {
@@ -49,8 +52,8 @@ export default function Create() {
                             })
                         }} />
 
-                    <br /><button type="submit">Create my Project</button>
-                </form>
+                    <br /><button type="submit" className={styles.button64}><span class="text"> Create project </span></button>
+                </form> */}
             </Page>
         )
     } else {
