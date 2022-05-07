@@ -5,6 +5,7 @@ import { useContext } from "react";
 import FormField from "../project/FormField";
 import Select from 'react-select';
 
+
 export default function Create() {
     const { account } = useContext(WalletContext);
     console.log("adresse = ", account);
@@ -22,9 +23,9 @@ export default function Create() {
                     <FormField type="text" name="Name" width="162%" title=" Description :" display="inline-block" /><br />
                     <FormField type="number" name="Name" width="100%" title="Goal :" display="inline-block" />
                     <FormField type="text" name="Name" width="100%" title="token :" display="inline-block" marginLeft="2%" /> <br />
-                    <input type="file" style={{ marginBottom: "1.5%" }} />
+                    <input class="button-64" type="file" style={{ marginBottom: "1.5%" }} />
 
-                    <Select options={options}
+                    <Select options={options} style={{color: "white"}}
                         theme={(theme) => {
                             console.log(theme.colors) 
                             return ({
@@ -34,7 +35,7 @@ export default function Create() {
                                     ...theme.colors,
                                     primary25: "#4ec1f7",
                                     primary: "#008770",
-                                    neutral0:"#16161c"
+                                    neutral0:"#16161c",
                                 }
                             })
                         }} />
