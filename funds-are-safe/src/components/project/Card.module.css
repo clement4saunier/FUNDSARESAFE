@@ -1,0 +1,4 @@
+.card {
+    background-color: var(--color-theme-main);
+    padding: var(--space-large);
+}

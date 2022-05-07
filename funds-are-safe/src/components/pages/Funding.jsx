@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "../layout/Page";
+import List from "../project/List";
 
 export default function Funding() {
     return (
@@ -7,6 +8,8 @@ export default function Funding() {
             FUNDING PAGE
             <br/>
             See every fundings
+            <h1>Projects</h1>
+            <List/>
         </Page>
     )
 }
