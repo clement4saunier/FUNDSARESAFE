@@ -1,8 +1,11 @@
 
 :root {
   --color-background-main: #16161c; /*Main Background*/
-  --color-accent: #008770; /*Color Accent*/
+  --color-theme-main: #008770; /*Color Accent*/
+  --color-theme-second: #4ec1f7; /*Color Accent*/
+  --color-theme-third: #ffd759;
   --color-text-main: white;
+  --color-text-second: #606060;
   --space-small: 4px; 
   --space-medium: 8px; 
   --space-large: 12px; 
@@ -29,7 +32,7 @@ body {
 
 button {
   color: var(--color-text-main);
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--color-theme-main);
   background-color: var(--color-background-border);
   padding: var(--space-medium);
   padding-left: var(--space-large);

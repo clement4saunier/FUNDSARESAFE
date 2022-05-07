@@ -1,34 +1,55 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import styles from "./Header.module.css"
+import { useLocation, useNavigate } from "react-router-dom";
+import styles from "./Header.module.css";
 
 export default function Header() {
-    let navigate = useNavigate();
+  let navigate = useNavigate();
+  let location = useLocation();
 
-    function onFundButton() {
-        navigate("/funding");
-    }
+  console.log(location);
 
-    function onCreateButton() {
-        navigate("/create");
-    }
+  function onFundButton() {
+    navigate("/funding");
+  }
 
-    function onTitleButton() {
-        navigate("/");
-    }
+  function onCreateButton() {
+    navigate("/create");
+  }
 
-    return (
-        <header>
-            <div onClick={onTitleButton} style={{cursor: "pointer"}}>
-                FUNDSARESAFE
-            </div>
-            <div>
-                <button onClick={onFundButton}>Fund</button>
-                <button onClick={onCreateButton}>Create</button>
-            </div>
-            <div>
-                //Identity
-            </div>
-        </header>
-    )
+  function onTitleButton() {
+    navigate("/");
+  }
+
+  return (
+    <header>
+      <div
+        className={
+          location.pathname === "/funding" ? styles.selected : styles.casual
+        }
+        onClick={onTitleButton}
+        style={{ cursor: "pointer" }}
+      >
+        FUNDSARESAFE
+      </div>
+      <div>
+        <button
+          className={
+            location.pathname === "/funding" ? styles.selected : styles.casual
+          }
+          onClick={onFundButton}
+        >
+          FUND
+        </button>
+        <button
+          className={
+            location.pathname === "/create" ? styles.selected : styles.casual
+          }
+          onClick={onCreateButton}
+        >
+          CREATE
+        </button>
+      </div>
+      <div>//Identity</div>
+    </header>
+  );
 }
