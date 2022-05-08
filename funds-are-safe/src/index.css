@@ -48,54 +48,23 @@ body {
 }
 
 button {
-  font-family: 'Share Tech Mono';
-  align-items: center;
-  background-image: linear-gradient(144deg, #23c4aa, #04705f 50%, #00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(4, 111, 94, 0.25) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-size: large;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 5em;
-  padding: 2px;
-  text-decoration: none;
+  font-family: 'Share Tech Mono' !important;
+  padding: 0.75em 2em;
+  border: none;
+  outline: none;
+  color: white;
+  background: #0F3B38;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 7.5px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-button:active,
-button:hover {
-  outline: 0;
-}
-
-button span {
-  background-color: rgb(5, 6, 45);
-  padding: 16px 24px;
-  border-radius: 6px;
-  width: 100%;
-  height: 100%;
-  transition: 300ms;
-}
-
-button:hover span {
-  background: none;
-}
-
-button:hover:active {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 button:hover {
-  backdrop-filter: brightness(150%);
-  cursor: pointer;
+  color: white;
 }
 
 h1 {

@@ -45,7 +45,7 @@ export default function Header() {
           }
           onClick={onFundButton}
         >
-          <span>FUNDS</span>
+          FUNDS
         </button>
         </div>
         <div>
@@ -54,12 +54,12 @@ export default function Header() {
             location.pathname === "/create" ? styles.selected : styles.casual
           }
           onClick={onCreateButton}
-        > <span>CREATE</span>
+        >CREATE
         </button>
         </div>
       </div>
       <div>
-        <button onClick={requestAccounts}><span>{account ?? "Connect Wallet"}</span></button>
+        <button onClick={requestAccounts}>{account ?? "Connect Wallet"}</button>
       </div>
     </header>
   );

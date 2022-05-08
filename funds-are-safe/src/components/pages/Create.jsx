@@ -50,7 +50,7 @@ export default function Create() {
           placeholder="The details of your project, why it'll be worht it (full markdown)"
         />
         <button onClick={onUpload} className={styles.button64}>
-          <span>Mint your project</span>
+          Mint your project
         </button>
         <h1>
           <span style={{ color: "#23C4AA" }}>#1 UPLOAD</span> TO IPFS

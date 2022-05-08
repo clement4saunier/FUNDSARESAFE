@@ -36,13 +36,15 @@ header h2 > a {
 }
 
 .selected {
-    border-color: var(--color-theme-main);
+    /* border-color: var(--color-theme-main); */
 }
 
 button.selected {
-    background-color: var(--color-theme-main);
+    background-color: #00856E;
+    transition: 0.2s;
+    /* background-color: var(--color-theme-main); */
 }
 
 .casual {
-    border-color: var(--color-text-second);
+    /* border-color: var(--color-text-second); */
 }
