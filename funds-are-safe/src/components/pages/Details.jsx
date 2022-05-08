@@ -24,7 +24,6 @@ export default function Details() {
   }
 
   useEffect(() => {
-    console.log("oken", token);
     if (!token) return;
 
     setTokenContract(

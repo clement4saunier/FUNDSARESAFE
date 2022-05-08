@@ -24,7 +24,6 @@ export function useStartonFundingContract(address) {
     try {
       const req = await axios(config);
 
-      console.log(req);
       return req.data.response;
     } catch (err) {
         console.error(err);

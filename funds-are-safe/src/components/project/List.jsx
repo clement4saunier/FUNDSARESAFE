@@ -10,7 +10,6 @@ export default function List() {
   );
   const { projectSupply, projects } = useStartonState();
   
-  console.log('proj', projects);
   return (
     <div>
       {projectSupply ?? "..."} projects launched

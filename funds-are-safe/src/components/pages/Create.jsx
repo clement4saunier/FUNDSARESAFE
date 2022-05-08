@@ -17,28 +17,23 @@ export default function Create() {
 
   async function onUpload() {
     const { file, name, goal, token } = projectInfo;
-    console.log("projectInfo:", projectInfo);
-    console.log("markdown:", markdown);
     const ipfsImage = await client.add(projectInfo.file);
     const metadata = {
       name,
       image: ipfsImage.path,
       description: markdown
     };
-    console.log("metadata", metadata);
-    console.log("token", token);
     const ipfsJson = await client.add(JSON.stringify(metadata));
     setMetadata({ cid: ipfsJson.path, content: metadata });
     setState("minting");
   }
 
   async function onMintButton() {
-      console.log(projectInfo);
-    console.log(await fundingContract.createFunding(
+    await fundingContract.createFunding(
       projectInfo.token,
       projectInfo.goal,
       "https://ipfs.io/ipfs/" + metadata.cid
-    ))
+    )
   }
 
   if (account) {
@@ -93,7 +88,6 @@ export default function Create() {
       </Page>
     );
   } else {
-    console.log("not connected");
     return <Page>Connect you to create a project</Page>;
   }
 }
