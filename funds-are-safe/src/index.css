@@ -44,6 +44,7 @@ body {
     #12282B 0%,
     var(--color-background-main) 100%
   );
+  overflow: hidden;
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161C", endColorstr="#008770", GradientType=1);
 }
 
