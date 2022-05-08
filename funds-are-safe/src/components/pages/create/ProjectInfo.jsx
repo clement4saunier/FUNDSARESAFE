@@ -5,7 +5,7 @@ export default function ProjectInfo({ onStateChange }) {
   const [file, setFile] = useState("");
   const [name, setName] = useState("");
   const [goal, setGoal] = useState("");
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState("0x65c890037ba6e2dC260111E158b33cc9941368C7");
   const [imageUrl, setImageUrl] = useState();
 
   function onImageUpload(e) {
@@ -41,10 +41,10 @@ export default function ProjectInfo({ onStateChange }) {
             setToken(e.target.value);
           }}
         >
-          <option value="USDC"> USDC</option>
-          <option value="WETH"> WETH</option>
-          <option value="MATIC"> MATIC</option>
-          <option value="APECOIN"> APECOIN</option>
+          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> USDC</option>
+          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> WETH</option>
+          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> MATIC</option>
+          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> APECOIN</option>
         </select>
         <input
           className={styles.input}
