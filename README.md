@@ -8,10 +8,10 @@ A crowd-funding platform entirely decentralized using Ethereum (here deployed on
 * Solidity
 * Hardhat
 
-##Smart Contract
+## Smart Contract
 We wrote a Funding.sol contract in our hardhat project subdirectory to handle the funding of a project, in any kind of ERC-20, therefore we could choose USDC, wETH, MATIC...). 
 
-##Features
+## Features
 The react page is static, meaning we can host it on IPFS and have a decentralized distribution and creation of crowd-funding campaign with a trustless coin management.
 ### Creating a crowd-funding
 ![image](https://user-images.githubusercontent.com/47207681/167303371-6b61c1ad-1012-455b-b643-b21438f285b0.png)
