@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import styles from "./ProjectInfo.module.css";
 
 export default function ProjectInfo({ onStateChange }) {
-  const [file, setFile] = useState();
-  const [name, setName] = useState();
-  const [goal, setGoal] = useState();
-  const [token, setToken] = useState();
+  const [file, setFile] = useState("");
+  const [name, setName] = useState("");
+  const [goal, setGoal] = useState("");
+  const [token, setToken] = useState("");
   const [imageUrl, setImageUrl] = useState();
 
   function onImageUpload(e) {
@@ -22,7 +22,7 @@ export default function ProjectInfo({ onStateChange }) {
     <div className={styles.projectInfo}>
       <div>
         <h3>MEDIA</h3>
-        <input type="file" onChange={onImageUpload}></input>
+        <input type="file" accept="image/*" onChange={onImageUpload}></input>
         <img alt="" src={imageUrl} />
       </div>
       <div>

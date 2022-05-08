@@ -14,6 +14,8 @@ export default function Create() {
   const { account } = useContext(WalletContext);
   const [projectInfo, setProjectInfo] = useState({});
   const [markdown, setMarkdown] = useState("");
+  const [state, setState] = useState("writing");
+  const [metadata, setMetadata] = useState();
 
   async function onUpload() {
     const { file, name, goal, token } = projectInfo;
@@ -27,6 +29,9 @@ export default function Create() {
       token
     };
     console.log("metadata", metadata);
+    const ipfsJson = await client.add(JSON.stringify(metadata));
+    setMetadata({ cid: ipfsJson.path, content: metadata });
+    setState("minting");
   }
 
   if (account) {
@@ -34,7 +39,10 @@ export default function Create() {
       <Page>
         <br />
         <h1>
-          <span style={{ color: "#23C4AA" }}>#1 DESCRIBE</span> <u>YOUR PROJECT</u>
+          <span style={{ color: state === "writing" ? "#23C4AA" : "" }}>
+            #1 DESCRIBE
+          </span>{" "}
+          <u>YOUR PROJECT</u>
         </h1>
         <br />
         <h2>BROADLY</h2>
@@ -49,12 +57,31 @@ export default function Create() {
           onChange={(e) => setMarkdown(e.target.value)}
           placeholder="The details of your project, why it'll be worht it (full markdown)"
         />
-        <button onClick={onUpload} className={styles.button64}>
-          <span>Mint your project</span>
+        <button onClick={() => setState("uploading")}>
+          Confirm it's correct
         </button>
         <h1>
-          <span style={{ color: "#23C4AA" }}>#1 UPLOAD</span> TO IPFS
+          <span style={{ color: state === "uploading" ? "#23C4AA" : "" }}>
+            #2 UPLOAD
+          </span>{" "}
+          TO IPFS
         </h1>
+        <p>IPFS is a decentralized file storage solution...</p>
+        <button onClick={onUpload}>
+          <span>Mint your project</span>
+        </button>
+        {metadata !== undefined && (
+          <>
+            File uploaded to <a href={"https://ipfs.io/ipfs/" + metadata.cid} target="_blank">{metadata.cid}</a>
+          </>
+        )}
+        <h1>
+          <span style={{ color: state === "minting" ? "#23C4AA" : "" }}>
+            #3 MINT
+          </span>{" "}
+          YOUR PAGE ON-CHAIN
+        </h1>
+        <button>Mint</button>
       </Page>
     );
   } else {
