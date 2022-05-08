@@ -22,7 +22,6 @@ function App() {
       new utils.Interface(abi.abi),
       wallet.readOnly ? wallet.provider : wallet.provider.getSigner()
     );
-  console.log("contract", fundingContract);
 
   return (
     <div className="App">

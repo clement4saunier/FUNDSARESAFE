@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { erc20Contracts } from "../../../contract/contract";
 import styles from "./ProjectInfo.module.css";
 
 export default function ProjectInfo({ onStateChange }) {
   const [file, setFile] = useState("");
   const [name, setName] = useState("");
   const [goal, setGoal] = useState("");
-  const [token, setToken] = useState("0x65c890037ba6e2dC260111E158b33cc9941368C7");
+  const [token, setToken] = useState(erc20Contracts[0]);
   const [imageUrl, setImageUrl] = useState();
 
   function onImageUpload(e) {
@@ -19,7 +20,7 @@ export default function ProjectInfo({ onStateChange }) {
   }, [file, name, goal, token]);
 
   return (
-    <div className={styles.projectInfo}>
+    <div className={[styles.projectInfo, "panel-shadow"].join(" ")}>
       <div>
         <h3>MEDIA</h3>
         <input type="file" accept="image/*" onChange={onImageUpload}></input>
@@ -41,10 +42,10 @@ export default function ProjectInfo({ onStateChange }) {
             setToken(e.target.value);
           }}
         >
-          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> USDC</option>
-          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> WETH</option>
-          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> MATIC</option>
-          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> APECOIN</option>
+          {erc20Contracts.map(({address, name}) => {return (
+          <option key={address} value={address}>{name}</option>
+
+          )})}
         </select>
         <input
           className={styles.input}

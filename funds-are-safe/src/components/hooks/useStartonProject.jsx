@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useStartonFundingContract } from "./useStartonFundingContract";
+import { BigNumber } from "ethers";
 
 export default function useStartonProject(id) {
   const [metadata, setMetadata] = useState();
@@ -17,8 +18,8 @@ export default function useStartonProject(id) {
 
       setOngoing(_ongoing);
       setToken(_token);
-      setGoal(_goal);
-      setFund(_fund);
+      setGoal(BigNumber.from(_goal).toString());
+      setFund(BigNumber.from(_fund).toString());
       const ipfs = await fetch(_metadata);
       setMetadata(await ipfs.json());
     }

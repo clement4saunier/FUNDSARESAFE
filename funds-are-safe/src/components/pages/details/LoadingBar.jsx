@@ -6,9 +6,11 @@ LoadingBar.defaultProps = {
 }
 
 export default function LoadingBar({value}) {
+    const realValue = parseInt(value);
+
     return (
         <div className={styles.main}>   
-            {value !== "0%" && <div className={styles.bar} style={{width: value}}>
+            {value !== "0%" && <div className={styles.bar} style={{width: realValue >= 100 ? "100%" : value}}>
             </div>}
         </div>
     )

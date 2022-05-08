@@ -1,11 +1,18 @@
-import { BigNumber } from "ethers";
 import React from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useStartonProject from "../hooks/useStartonProject";
 import styles from "./Card.module.css";
+import { erc20Contract } from "../../contract/contract";
+import { erc20Contracts } from "../../contract/contract";
 
 export default function Card({ id }) {
   const { metadata, goal, fund, token, ongoing } = useStartonProject(id);
+  const [funded, setFunded] = useState(false);
+  
+  useEffect(() => {
+    if (fund > goal) setFunded(true);
+  }, [goal, fund])
 
   let navigate = useNavigate();
 
@@ -17,16 +24,14 @@ export default function Card({ id }) {
     <div
       onClick={onCardClick}
       style={{ cursor: "pointer" }}
-      className={styles.card}
+      className={styles.card + " panel-shadow"}
     >
       <div>
         <h2>{metadata?.name ?? "..."}</h2>
-        ongoing: {ongoing ? "true" : "false"}
+        {funded ? "Funded!" : "Ongoing"}
         <br />
-        token: {token}
-        <br />
-        funding: {fund && BigNumber.from(fund).toString()}/
-        {goal && BigNumber.from(goal).toString()}
+        {fund && goal && parseInt((fund/goal) * 100).toString()}{"% of "}
+        {goal && goal} in ${erc20Contracts.find(({address}) => address === token)?.name ?? "???"}
       </div>
       <div>
         {metadata && (
