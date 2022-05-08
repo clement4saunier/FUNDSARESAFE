@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <WalletContext.Provider value={wallet}>
+      <WalletContext.Provider value={{fundingContract, ...wallet}}>
         <BrowserRouter>
           <Header />
           <Routes>

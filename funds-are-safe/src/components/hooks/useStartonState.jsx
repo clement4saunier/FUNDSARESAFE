@@ -20,7 +20,7 @@ export default function useStartonState() {
     async function fetchProjects() {
       let _projects = [];
       await Promise.all(
-        [...Array(projectSupply)].map(async (_, idx) => {
+        [...Array(parseInt(projectSupply))].map(async (_, idx) => {
           _projects.push(await readValue("project", [idx.toString()]));
         })
       );
