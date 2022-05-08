@@ -6,7 +6,7 @@ export default function ProjectInfo({ onStateChange }) {
   const [file, setFile] = useState("");
   const [name, setName] = useState("");
   const [goal, setGoal] = useState("");
-  const [token, setToken] = useState(erc20Contracts[0]);
+  const [token, setToken] = useState(erc20Contracts[0].address);
   const [imageUrl, setImageUrl] = useState();
 
   function onImageUpload(e) {
@@ -42,10 +42,9 @@ export default function ProjectInfo({ onStateChange }) {
             setToken(e.target.value);
           }}
         >
-          {erc20Contracts.map(({address, name}) => {return (
-          <option key={address} value={address}>{name}</option>
-
-          )})}
+          {erc20Contracts.map(({address, name}) => {
+            return <option key={address} value={address}>{name}</option>
+          })}
         </select>
         <input
           className={styles.input}

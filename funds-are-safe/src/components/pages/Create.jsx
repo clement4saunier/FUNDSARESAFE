@@ -29,6 +29,7 @@ export default function Create() {
   }
 
   async function onMintButton() {
+      console.log(projectInfo.goal);
     await fundingContract.createFunding(
       projectInfo.token,
       projectInfo.goal,

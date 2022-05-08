@@ -10,6 +10,7 @@ import Page from "../layout/Page";
 import styles from "./Details.module.css";
 import LoadingBar from "./details/LoadingBar";
 import { erc20Contract } from "../../contract/contract";
+import ReactMarkdown from "react-markdown";
 
 export default function Details() {
   let { id } = useParams();
@@ -80,7 +81,9 @@ export default function Details() {
       <br />
       <br />
       <div className={[styles.card, "panel-shadow"].join(" ")}>
-        {metadata?.description ?? "..."}
+        {metadata && <ReactMarkdown>
+            {metadata.description}
+        </ReactMarkdown>}
       </div>
     </Page>
   );
