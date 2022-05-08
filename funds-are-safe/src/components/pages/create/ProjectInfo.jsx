@@ -12,7 +12,7 @@ export default function ProjectInfo() {
         <h3>NAME</h3>
         <input className={styles.input} placeholder="Project name" />
         <br />
-        <h3>GOAL</h3>
+        <h3 style={{"marginTop": "40%"}}>GOAL</h3>
         <select>
           <option value="red"> USDC</option>
           <option value="red"> WETH</option>

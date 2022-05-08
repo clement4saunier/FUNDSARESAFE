@@ -1,6 +1,6 @@
 header {
   text-align: center;
-  height: 64px;
+  height: fit-content;
   display: grid;
   grid-template-columns: minmax(200px, 30%) minmax(0px, 30%) minmax(200px, 30%);
   justify-content: space-between;
@@ -27,8 +27,8 @@ header >*:last-child {
 }
 
 header h2 {
-  font-family: 'Frankfurter';
-  font-weight: 500;
+    font-family: 'Frankfurter';
+    font-weight: 500;
 }
 
 header h2 > a {

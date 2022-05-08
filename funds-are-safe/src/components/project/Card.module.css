@@ -3,4 +3,11 @@
     padding: var(--space-large);
     border-radius: var(--radius-large);
     /* height: 20%; */
+
+    background: hsla(240, 14%, 10%, 1);
+    background: linear-gradient(125deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 120%);
+    background: -moz-linear-gradient(125deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 120%);
+    background: -webkit-linear-gradient(125deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 120%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161d", endColorstr="#008770", GradientType=1);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }

@@ -3,7 +3,7 @@ import Page from "../layout/Page";
 import { useStartonFundingContract } from "../hooks/useStartonFundingContract";
 import useStartState from "../hooks/useStartonState";
 
-export default function Contract() {
+const Contract = () => {
     const {readValue} = useStartonFundingContract("0xB8942E9e99C4F7eFF3B57Da5588661C76A7F6b6F");
     const {projectSupply} = useStartState();
 
@@ -23,3 +23,5 @@ export default function Contract() {
         </Page>
     )
 }
+
+export default Contract

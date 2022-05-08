@@ -38,25 +38,28 @@ export default function Header() {
         </h2>
       </div>
       <div>
+      <div style={{"margin": "0 3vh"}}>
         <button
           className={
             location.pathname === "/funding" ? styles.selected : styles.casual
           }
           onClick={onFundButton}
         >
-          FUND
+          <span>FUNDS</span>
         </button>
+        </div>
+        <div>
         <button
           className={
             location.pathname === "/create" ? styles.selected : styles.casual
           }
           onClick={onCreateButton}
-        >
-          CREATE
+        > <span>CREATE</span>
         </button>
+        </div>
       </div>
       <div>
-        <button onClick={requestAccounts}>{account ?? "Connect Wallet"}</button>
+        <button onClick={requestAccounts}><span>{account ?? "Connect Wallet"}</span></button>
       </div>
     </header>
   );
