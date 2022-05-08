@@ -16,6 +16,7 @@
   --radius-small: 4px;
   --radius-medium: 8px;
   --radius-large: 12px;
+  --size-topbar: 70px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -51,11 +52,14 @@ body {
 input,
 select,
 textarea,
-button {
+button,
+.panel {
+  outline: none;
+  font-family: 'Share Tech Mono' !important;
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-medium);
   background-color: transparent;
-  backdrop-filter: brightness(120%);
+  backdrop-filter: blur(12px) grayscale(60%);
   padding: var(--space-medium);
   margin-inline: var(--space-small);
   width: min-content;
@@ -93,6 +97,7 @@ button:active {
 h1 {
   font-family: 'Share Tech Mono';
   font-size: 42pt;
+  margin-block-start: 1.5em;
 }
 
 h2 {
@@ -127,4 +132,5 @@ footer {
   padding-top: var(--space-larger);
   padding-bottom: var(--space-larger);
   margin-top: var(--space-larger);
+  color: var(--color-text-second);
 }

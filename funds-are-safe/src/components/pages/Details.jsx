@@ -1,10 +1,10 @@
 import React from "react";
 import Page from "../layout/Page";
 
-export default function Funding() {
+export default function Details() {
     return (
         <Page>
-            FUNDING PAGE
+            Details PAGE
             <br/>
             See details of a deployed contract in URL
         </Page>

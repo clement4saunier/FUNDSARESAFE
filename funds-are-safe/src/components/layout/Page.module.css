@@ -8,7 +8,12 @@
   margin-inline: auto;
 }
 
-.page > *:first-child {
+.page > .content {
+  padding-top: var(--size-topbar);
   min-height: 100%;
   padding-bottom: var(--space-larger);
+}
+
+*::-webkit-scrollbar {
+  width: 0em;
 }
