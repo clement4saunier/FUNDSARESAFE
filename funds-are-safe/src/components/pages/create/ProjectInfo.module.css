@@ -8,7 +8,6 @@
     width: 100%;
     background: hsla(240, 14%, 10%, 1);
     background: linear-gradient(-90deg,hsla(240, 14%, 10%, 1) -50%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 150%);
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .projectInfo img {
