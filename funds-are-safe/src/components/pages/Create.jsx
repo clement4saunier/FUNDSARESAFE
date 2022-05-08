@@ -73,11 +73,11 @@ export default function Create() {
           <span style={{ color: state === "uploading" ? "#23C4AA" : "" }}>
             #2 UPLOAD
           </span>{" "}
-          TO IPFS
+          TO <u>IPFS</u>
         </h1>
         <p>IPFS is a decentralized file storage solution...</p>
         <button onClick={onUpload}>
-          <span>Mint your project</span>
+          <span>Upload metadata to IPFS</span>
         </button>
         {metadata !== undefined && (
           <>
@@ -91,7 +91,7 @@ export default function Create() {
           <span style={{ color: state === "minting" ? "#23C4AA" : "" }}>
             #3 MINT
           </span>{" "}
-          YOUR PAGE ON-CHAIN
+          YOUR PAGE <u>ON-CHAIN</u>
         </h1>
         <button onClick={onMintButton}>Mint</button>
       </Page>
