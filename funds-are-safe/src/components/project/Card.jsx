@@ -1,12 +1,12 @@
 import { BigNumber } from "ethers";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useStartonProject from "../hooks/useStartonProject";
 import styles from "./Card.module.css";
 
-export default function Card({
-  project: [metadata, ongoing, token, goal, fund],
-  id
-}) {
+export default function Card({ id }) {
+  const { metadata, goal, fund, token, ongoing } = useStartonProject(id);
+
   let navigate = useNavigate();
 
   function onCardClick() {
@@ -19,17 +19,23 @@ export default function Card({
       style={{ cursor: "pointer" }}
       className={styles.card}
     >
-      <h2></h2>
-      <p>
-        metadata: {metadata}
-        <br />
+      <div>
+        <h2>{metadata?.name ?? "..."}</h2>
         ongoing: {ongoing ? "true" : "false"}
         <br />
         token: {token}
         <br />
-        funding: {BigNumber.from(fund).toString()}/
-        {BigNumber.from(goal).toString()}
-      </p>
+        funding: {fund && BigNumber.from(fund).toString()}/
+        {goal && BigNumber.from(goal).toString()}
+      </div>
+      <div>
+        {metadata && (
+          <img
+            alt="campaign-preview"
+            src={"https://ipfs.io/ipfs/" + metadata.image}
+          ></img>
+        )}
+      </div>
     </div>
   );
 }

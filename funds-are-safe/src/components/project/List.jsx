@@ -16,8 +16,8 @@ export default function List() {
       {projectSupply ?? "..."} projects launched
       <br />
       <div className={styles.list}>
-        {projects.map((project, idx) => {
-          return <Card key={idx} project={project} id={idx}/>;
+        {projectSupply && [...Array(parseInt(projectSupply))].map((project, idx) => {
+          return <Card key={idx} id={idx}/>;
         })}
       </div>
     </div>
