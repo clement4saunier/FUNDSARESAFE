@@ -1,13 +1,9 @@
 .projectInfo {
-    background-color: #0F0F3D;
-    padding: var(--space-medium);
     display: flex;
     gap: var(--space-larger);
     flex-wrap: wrap;
     border-radius: var(--radius-medium);
     width: 100%;
-    background: hsla(240, 14%, 10%, 1);
-    background: linear-gradient(-90deg,hsla(240, 14%, 10%, 1) -50%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 150%);
 }
 
 .projectInfo img {

@@ -3,6 +3,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, auto);
     width: 100%;
-    gap: var(--space-large);
+    gap: var(--space-larger);
     position: relative;
 }

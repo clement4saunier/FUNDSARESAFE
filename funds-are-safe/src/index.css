@@ -17,6 +17,7 @@
   --radius-medium: 8px;
   --radius-large: 12px;
   --size-topbar: 70px;
+  --shadow-small: rgba(0, 0, 0, 0.56) 0px 6px 24px 4px
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -122,7 +123,12 @@ textarea {
 }
 
 option {
-  background-color: var(--color-theme-main);
+  background-color: var(--color-background-main);
+  backdrop-filter: blur(12px) grayscale(60%);
+}
+
+select *::selection {
+  background-color: blue;
 }
 
 input::placeholder {

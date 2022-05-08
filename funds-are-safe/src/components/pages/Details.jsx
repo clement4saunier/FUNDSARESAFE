@@ -39,13 +39,7 @@ export default function Details() {
   useEffect(() => {
     if (!goal || !fund) return;
 
-    console.log(goal, "/", fund);
-    if (goal?._isBigNumber && fund._isBigNumber) {
-      const fundNb = BigNumber.from(fund).toNumber();
-      const goalNb = BigNumber.from(goal).toNumber();
-
-      setFunded(((fundNb / goalNb) * 100).toString() + "%");
-    }
+      setFunded(parseInt((fund / goal) * 100).toString() + "%");
   }, [goal, fund]);
 
   async function onFundButton() {
