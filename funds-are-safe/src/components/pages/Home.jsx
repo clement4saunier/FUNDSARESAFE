@@ -20,7 +20,7 @@ export default function Home() {
                 </div>
                 <div className="panel-shadow">
                     <h2><span style={{ "color": "#008770" }}>Achieve</span> your goal</h2>
-                    <p>You will be able to unlock your funds after having reach your objectives</p>
+                    <p>You will receive your donations once the goal is reached</p>
                 </div>
             </div>
         </Page>
