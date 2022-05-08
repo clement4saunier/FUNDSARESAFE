@@ -121,3 +121,10 @@ input::placeholder {
 a {
   color: var(--color-theme-main);
 }
+
+footer {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-larger);
+  padding-bottom: var(--space-larger);
+  margin-top: var(--space-larger);
+}

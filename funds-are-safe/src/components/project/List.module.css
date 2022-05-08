@@ -1,7 +1,7 @@
 .list {
     margin-top: var(--space-medium);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, auto);
     width: 100%;
     gap: var(--space-large);
     position: relative;
