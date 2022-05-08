@@ -5,9 +5,9 @@
     /* height: 20%; */
 
     background: hsla(240, 14%, 10%, 1);
-    background: linear-gradient(180deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 100%);
-    background: -moz-linear-gradient(180deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 100%);
-    background: -webkit-linear-gradient(180deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 100%);
+    background: linear-gradient(0deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 140%);
+    background: -moz-linear-gradient(0de, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 140%);
+    background: -webkit-linear-gradient(0deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 140%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161d", endColorstr="#008770", GradientType=1);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }

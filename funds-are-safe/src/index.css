@@ -26,9 +26,9 @@ textarea {
   border-radius: 15px;
 
   background: hsla(240, 14%, 10%, 1);
-  background: linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%);
-  background: -moz-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%);
-  background: -webkit-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%%);
+  background: linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 115%);
+  background: -moz-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 115%);
+  background: -webkit-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 115%);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161d", endColorstr="#008770", GradientType=1);
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
