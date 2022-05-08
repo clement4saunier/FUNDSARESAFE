@@ -9,4 +9,8 @@ contract Token is ERC20 {
     constructor() ERC20("TKN", "TKN") {
         _mint(msg.sender, 100000);
     }
+
+    function decimals() public view virtual override returns (uint8) {
+        return 0;
+    }
 }
