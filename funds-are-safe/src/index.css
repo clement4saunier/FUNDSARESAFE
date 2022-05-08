@@ -39,21 +39,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background-main);
   color: var(--color-text-main);
-  background: hsla(240, 12%, 10%, 1);
-
-  background: linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
-  background: -moz-linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
-  background: -webkit-linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
+  background: radial-gradient(
+    at 50% 20%,
+    #12282B 0%,
+    var(--color-background-main) 100%
+  );
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161C", endColorstr="#008770", GradientType=1);
+}
+
+input,
+select,
+textarea,
+button {
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-medium);
+  background-color: transparent;
+  backdrop-filter: brightness(120%);
+  padding: var(--space-medium);
+  margin-inline: var(--space-small);
+  width: min-content;
+  color: var(--color-text-main);
+  backdrop-filter: blur(4px);
 }
 
 button {
   font-family: 'Share Tech Mono' !important;
   padding: 0.75em 2em;
-  border: none;
   outline: none;
   color: white;
-  background: #0F3B38;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -61,10 +74,19 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  white-space: nowrap;
+  color: white;
+  background-color: var(--color-theme-main);
+  backdrop-filter: brightness(120%);
 }
 
 button:hover {
   color: white;
+  transform: translateY(-1px)
+}
+
+button:active {
+  transform: translateY(0px)
 }
 
 h1 {
@@ -82,18 +104,6 @@ h3 {
   font-weight: 300;
 }
 
-input,
-select,
-textarea {
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-medium);
-  background-color: transparent;
-  backdrop-filter: brightness(120%);
-  padding: var(--space-medium);
-  margin-inline: var(--space-small);
-  width: min-content;
-  color: var(--color-text-main);
-}
 
 textarea {
   resize: vertical;
@@ -105,4 +115,8 @@ option {
 
 input::placeholder {
   color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-theme-main);
 }
