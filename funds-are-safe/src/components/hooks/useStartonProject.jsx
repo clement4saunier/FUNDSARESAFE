@@ -25,5 +25,5 @@ export default function useStartonProject(id) {
 
     fetchContractData();
   }, [id]);
-  return { metadata, goal, fund };
+  return { metadata, goal, fund, token, ongoing };
 }

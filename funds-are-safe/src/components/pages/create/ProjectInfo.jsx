@@ -41,10 +41,10 @@ export default function ProjectInfo({ onStateChange }) {
             setToken(e.target.value);
           }}
         >
-          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> USDC</option>
-          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> WETH</option>
-          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> MATIC</option>
-          <option value="0x65c890037ba6e2dC260111E158b33cc9941368C7"> APECOIN</option>
+          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> USDC</option>
+          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> WETH</option>
+          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> MATIC</option>
+          <option value="0x992946917214397fdbDD6C6b63ecf615535b5D75"> APECOIN</option>
         </select>
         <input
           className={styles.input}

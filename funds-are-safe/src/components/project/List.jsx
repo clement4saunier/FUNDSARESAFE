@@ -14,7 +14,6 @@ export default function List() {
   return (
     <div>
       {projectSupply ?? "..."} projects launched
-      {projects.length} projects s
       <br />
       <div className={styles.list}>
         {projects.map((project, idx) => {

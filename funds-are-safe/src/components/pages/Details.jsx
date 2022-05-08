@@ -1,28 +1,57 @@
-import React from "react";
+import { BigNumber, Contract } from "ethers";
+import { Interface } from "ethers/lib/utils";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { WalletContext } from "../context/Wallet";
 import useStartonProject from "../hooks/useStartonProject";
+import useWallet from "../hooks/useWallet";
 import Page from "../layout/Page";
 import styles from "./Details.module.css";
 import LoadingBar from "./details/LoadingBar";
+import { erc20Contract } from "../../contract/contract";
 
 export default function Details() {
   let { id } = useParams();
-  const { metadata, goal, fund } = useStartonProject(id);
+  const { fundingContract, provider } = useContext(WalletContext);
+  const { metadata, goal, fund, token } = useStartonProject(id);
   const [funded, setFunded] = useState("0%");
+  const [amount, setAmount] = useState(1);
+  const [tokenContract, setTokenContract] = useState();
 
   useEffect(() => {
-    if (!goal || !funded) return;
+    console.log("oken", token);
+    if (!token) return;
 
-    if (goal?._isBigNumber && funded?._isBigNumber) {
+    setTokenContract(
+      new Contract(
+        token,
+        new Interface(erc20Contract.abi),
+        provider.getSigner()
+      )
+    );
+  }, [token]);
 
-        setFunded((fund.toNumber() / goal.toNumber()).toString() + "%");
-    }
+  useEffect(() => {
+    if (!goal || !fund) return;
+
     console.log(goal, "/", fund);
-  }, [goal, fund])
+    if (goal?._isBigNumber && fund._isBigNumber) {
+      const fundNb = BigNumber.from(fund).toNumber();
+      const goalNb = BigNumber.from(goal).toNumber();
 
-  function onFundButton() {
+      setFunded(((fundNb / goalNb) * 100).toString() + "%");
+    }
+  }, [goal, fund]);
 
+  async function onFundButton() {
+    await fundingContract.fund(id, amount, { gasLimit: 1000000 });
+  }
+
+  async function onApproveButton() {
+    if (!tokenContract) return;
+
+    await tokenContract.approve(fundingContract.address, amount);
   }
 
   return (
@@ -41,22 +70,21 @@ export default function Details() {
         </div>
         <h1>{metadata?.name ?? "..."}</h1>
         <div className={styles.funding}>
-            <LoadingBar value={funded}/>
-            <div className="panel">
-                {funded}
-            </div>
+          <LoadingBar value={funded} />
+          <div className="panel">{funded}</div>
         </div>
-      <br />
+        <br />
         <div className={styles.fundIt}>
-            <button onClick={onFundButton}>Fund it!</button>
-            <input placeholder="amount"></input>
+          <button onClick={onFundButton}>Fund it!</button>
+          <button onClick={onApproveButton}>Approve</button>
+          <input placeholder="amount"></input>
         </div>
       </div>
-      <br/>
-      <br/>
-        <div className={[styles.card, "panel-shadow"].join(" ")}>
-            {metadata?.description ?? "..."}
-        </div>
+      <br />
+      <br />
+      <div className={[styles.card, "panel-shadow"].join(" ")}>
+        {metadata?.description ?? "..."}
+      </div>
     </Page>
   );
 }
