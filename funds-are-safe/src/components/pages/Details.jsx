@@ -19,6 +19,10 @@ export default function Details() {
   const [amount, setAmount] = useState(1);
   const [tokenContract, setTokenContract] = useState();
 
+  function onInputChange(event) {
+    setAmount(parseInt(event.target.value));
+  }
+
   useEffect(() => {
     console.log("oken", token);
     if (!token) return;
@@ -77,7 +81,7 @@ export default function Details() {
         <div className={styles.fundIt}>
           <button onClick={onFundButton}>Fund it!</button>
           <button onClick={onApproveButton}>Approve</button>
-          <input placeholder="amount"></input>
+          <input onChange={onInputChange} placeholder="amount"></input>
         </div>
       </div>
       <br />
