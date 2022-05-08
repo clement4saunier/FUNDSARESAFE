@@ -24,6 +24,13 @@ textarea {
   box-shadow: #09332C;
   font-family: 'Share Tech Mono';
   border-radius: 15px;
+
+  background: hsla(240, 14%, 10%, 1);
+  background: linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%);
+  background: -moz-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%);
+  background: -webkit-linear-gradient(300deg, hsla(240, 14%, 10%, 1) 0%, hsla(170, 100%, 26%, 1) 0%, hsla(240, 14%, 10%, 1) 110%%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161d", endColorstr="#008770", GradientType=1);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -50,18 +57,15 @@ body {
   background: hsla(240, 12%, 10%, 1);
 
   background: linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
-  
   background: -moz-linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
-  
   background: -webkit-linear-gradient(300deg, hsla(240, 12%, 10%, 1) 75%, hsla(170, 100%, 26%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#16161C", endColorstr="#008770", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#16161C", endColorstr="#008770", GradientType=1);
 }
 
 button {
   font-family: 'Share Tech Mono';
   align-items: center;
-  background-image: linear-gradient(144deg,#23c4aa, #04705f 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #23c4aa, #04705f 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(4, 111, 94, 0.25) 0 15px 30px -5px;
@@ -113,10 +117,12 @@ h1 {
   font-family: 'Share Tech Mono';
   font-size: 42pt;
 }
+
 h2 {
   font-family: 'Share Tech Mono';
   font-size: 24pt;
 }
+
 h3 {
   font-family: 'Share Tech Mono';
   font-weight: 300;
