@@ -45,18 +45,18 @@ export default function Create() {
     return (
       <Page>
         <h1>
-        <i><span style={{ color: state === "writing" ? "#23C4AA" : "" }}>
-          <i>#1 DESCRIBE</i>
+        <span style={{ color: state === "writing" ? "#23C4AA" : "" }}>
+          #1 DESCRIBE
           </span>{" "}
-          <u>YOUR PROJECT</u></i>
+          <u>YOUR PROJECT</u>
         </h1>
-        <h2><i>BROADLY</i></h2>
+        <h2>BROADLY</h2>
         <ProjectInfo
           onStateChange={(v) => {
             setProjectInfo(v);
           }}
         />
-        <h2><i>IN DETAILS</i></h2>
+        <h2>IN DETAILS</h2>
         <textarea
           className={styles.markdown}
           onChange={(e) => setMarkdown(e.target.value)}
@@ -66,10 +66,10 @@ export default function Create() {
           Confirm it's correct
         </button>
         <h1>
-        <i><span style={{ color: state === "uploading" ? "#23C4AA" : "" }}>
+        <span style={{ color: state === "uploading" ? "#23C4AA" : "" }}>
           #2 UPLOAD
           </span>{" "}
-          TO <u>IPFS</u></i>
+          TO <u>IPFS</u>
         </h1>
         <p>IPFS is a decentralized file storage solution</p>
         <button onClick={onUpload}>
@@ -84,10 +84,10 @@ export default function Create() {
           </>
         )}
         <h1>
-        <i><span style={{ color: state === "minting" ? "#23C4AA" : "" }}>
+        <span style={{ color: state === "minting" ? "#23C4AA" : "" }}>
           #3 MINT
           </span>
-          {""} YOUR PAGE <u>ON-CHAIN</u></i>
+          {""} YOUR PAGE <u>ON-CHAIN</u>
         </h1>
         <button onClick={onMintButton}>Mint</button>
       </Page>
