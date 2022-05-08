@@ -18,13 +18,13 @@ export default function useStartonState() {
 
   useEffect(() => {
     async function fetchProjects() {
-      let _projects = [];
-      await Promise.all(
-        [...Array(parseInt(projectSupply))].map(async (_, idx) => {
-          _projects.push(await readValue("project", [idx.toString()]));
-        })
-      );
-      setProjects(_projects);
+      let projectArray = [];
+
+      for (let i = 0; i< projectSupply; i++) {
+        const project = await readValue("project", [i.toString()])
+        projectArray[i] = project;
+      }
+      setProjects(projectArray);
     }
 
     projectSupply && fetchProjects();

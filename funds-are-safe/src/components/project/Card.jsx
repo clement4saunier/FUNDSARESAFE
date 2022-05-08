@@ -4,16 +4,21 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Card.module.css";
 
 export default function Card({
-  project: [metadata, ongoing, token, goal, fund]
+  project: [metadata, ongoing, token, goal, fund],
+  id
 }) {
   let navigate = useNavigate();
 
- function onCardClick() {
-    navigate("/funding/0")
+  function onCardClick() {
+    navigate("/funding/" + id);
   }
 
   return (
-    <div onClick={onCardClick} style={{cursor: "pointer"}} className={styles.card}>
+    <div
+      onClick={onCardClick}
+      style={{ cursor: "pointer" }}
+      className={styles.card}
+    >
       <h2></h2>
       <p>
         metadata: {metadata}
@@ -22,7 +27,8 @@ export default function Card({
         <br />
         token: {token}
         <br />
-        funding: {BigNumber.from(fund).toString()}/{BigNumber.from(goal).toString()}
+        funding: {BigNumber.from(fund).toString()}/
+        {BigNumber.from(goal).toString()}
       </p>
     </div>
   );
