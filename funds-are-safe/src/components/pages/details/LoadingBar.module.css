@@ -11,7 +11,9 @@
 }
 
 .bar {
-  background-color: var(--color-theme-second);
+  background-color: var(--color-theme-main);
   border-right: 1px solid var(--color-border-light);
   height: 100%;
+  border-start-end-radius: 0px;
+  border-end-end-radius: 0px;
 }
