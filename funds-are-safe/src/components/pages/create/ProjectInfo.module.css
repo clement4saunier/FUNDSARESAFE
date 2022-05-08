@@ -16,6 +16,7 @@
 
 .projectInfo img {
     object-fit: contain;
+    width: 100%;
     border-radius: var(--radius-medium);
 }
 

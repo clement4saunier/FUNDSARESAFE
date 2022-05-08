@@ -37,13 +37,13 @@ export default function Create() {
           <span style={{ color: "#23C4AA" }}>#1 DESCRIBE</span> <u>YOUR PROJECT</u>
         </h1>
         <br />
-        <h2>TELL THE PEOPLE</h2>
+        <h2>BROADLY</h2>
         <ProjectInfo
           onStateChange={(v) => {
             setProjectInfo(v);
           }}
         />
-        <h2>TELL THE PEOPLE</h2>
+        <h2>IN DETAILS</h2>
         <textarea
           className={styles.markdown}
           onChange={(e) => setMarkdown(e.target.value)}
@@ -52,6 +52,9 @@ export default function Create() {
         <button onClick={onUpload} className={styles.button64}>
           <span>Mint your project</span>
         </button>
+        <h1>
+          <span style={{ color: "#23C4AA" }}>#1 UPLOAD</span> TO IPFS
+        </h1>
       </Page>
     );
   } else {
