@@ -59,7 +59,7 @@ export default function Header() {
         </div>
       </div>
       <div>
-        <button onClick={requestAccounts}>{account ?? "Connect Wallet"}</button>
+        <div className="panel" onClick={requestAccounts}>{account ?? "Connect Wallet"}</div>
       </div>
     </header>
   );

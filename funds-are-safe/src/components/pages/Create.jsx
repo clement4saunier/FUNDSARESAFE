@@ -46,14 +46,12 @@ export default function Create() {
   if (account) {
     return (
       <Page>
-        <br />
         <h1>
           <span style={{ color: state === "writing" ? "#23C4AA" : "" }}>
             #1 DESCRIBE
           </span>{" "}
           <u>YOUR PROJECT</u>
         </h1>
-        <br />
         <h2>BROADLY</h2>
         <ProjectInfo
           onStateChange={(v) => {

@@ -21,6 +21,7 @@
     display: flex;
     gap: var(--space-medium);
     flex-direction: column;
+    width: 50%;
 }
 
 .projectInfo h3 {
