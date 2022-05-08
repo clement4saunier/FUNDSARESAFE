@@ -11,16 +11,20 @@ export default function Home() {
             </div>
             <div className={styles.container}>
                 <div className="panel-shadow">
-                    <h2><span style={{ "color": "#008770" }}>Dedicated</span> funding page</h2>
-                    <p>The service generates a dedicated website hosted on IPFS to present your project and engage people.</p>
-                </div>
-                <div className="panel-shadow">
                     <h2><span style={{ "color": "#008770" }}>Raise</span> funds in crypto</h2>
-                    <p>Raise funds in USDC, WETH, MATIC...</p>
+                    <p>Raise funds in USDC, WETH, MATIC etc. without intermediary</p>
                 </div>
                 <div className="panel-shadow">
                     <h2><span style={{ "color": "#008770" }}>Achieve</span> your goal</h2>
                     <p>You will receive your donations once the goal is reached</p>
+                </div>
+                <div className="panel-shadow">
+                    <h2><span style={{ "color": "#008770" }}>Dedicated</span> funding page</h2>
+                    <p>The service generates a dedicated website hosted on IPFS to present your project and engage people</p>
+                </div>
+                <div className="panel-shadow">
+                    <h2><span style={{ "color": "#008770" }}>Govern</span> the projects you fund</h2>
+                    <p>Each project has its own token that you can get by funding them. Those tokens will unlock you advantages as a founder of the project</p>
                 </div>
             </div>
         </Page>

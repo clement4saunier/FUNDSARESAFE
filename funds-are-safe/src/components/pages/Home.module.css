@@ -3,7 +3,7 @@
     display: grid;
     gap: var(--space-larger);
     width: 100%;
-    grid-template-columns: repeat(3, minmax(auto, auto));
+    grid-template-columns: repeat(2, minmax(250px, auto));
     margin-top: var(--space-larger);
 }
 
