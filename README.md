@@ -8,13 +8,14 @@ A crowd-funding platform entirely decentralized using Ethereum (here deployed on
 * Solidity
 * Hardhat
 
+## Quickstart guide
 ### Installation
 * Install node with npm
 * clone the project
 * Enter the following command
-* cd FUNDSARESAFE/funds-are-safe
-* npm i
-* npm start
+* ```cd FUNDSARESAFE/funds-are-safe```
+* ```npm i```
+* ```npm start```
 
 ## Smart Contract
 We wrote a Funding.sol contract in our hardhat project subdirectory to handle the funding of a project, in any kind of ERC-20, therefore we could choose USDC, wETH, MATIC...). 
