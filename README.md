@@ -26,9 +26,8 @@ The react page is static, meaning we can host it on IPFS and have a decentralize
 ![image](https://user-images.githubusercontent.com/47207681/167303371-6b61c1ad-1012-455b-b643-b21438f285b0.png)
 
 ### Browse and share projects
-Since![mdok](https://user-images.githubusercontent.com/66868108/167398884-85320406-aebd-40e1-9690-3db4fb1d0a80.png)
  the website is on IPFS, the entire project page is decentralized!
 ![image](https://user-images.githubusercontent.com/47207681/167303399-8d55ab9d-2ab6-4188-8a17-e74b2417d364.png)
 
 ### Donate to projects
-![image](https://user-images.githubusercontent.com/47207681/167303447-3467ecd5-2cf5-493d-b8d8-8e821df021f1.png)
+Since![mdok](https://user-images.githubusercontent.com/66868108/167398884-85320406-aebd-40e1-9690-3db4fb1d0a80.png)
