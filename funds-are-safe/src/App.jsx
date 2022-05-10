@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/layout/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Create from "./components/pages/Create";
 import Home from "./components/pages/Home";
 import Funding from "./components/pages/Funding";
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <WalletContext.Provider value={{fundingContract, ...wallet}}>
-        <BrowserRouter>
+        <Router>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,7 +35,7 @@ function App() {
             <Route path="/funding/:id" element={<Details />} />
             <Route path="/contract" element={<Contract />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </WalletContext.Provider>
     </div>
   );
