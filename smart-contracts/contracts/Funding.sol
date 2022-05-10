@@ -68,6 +68,7 @@ contract Funding {
             project[projectId].fund >= project[projectId].goal,
             "Funding not complete"
         );
+        require(project[projectId].ongoing, "Funds already withdrawn");
         require(
             project[projectId].token.transfer(builder[projectId], project[projectId].fund),
             "Transfer failed"

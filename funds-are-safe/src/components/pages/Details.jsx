@@ -11,14 +11,18 @@ import styles from "./Details.module.css";
 import LoadingBar from "./details/LoadingBar";
 import { erc20Contract } from "../../contract/contract";
 import ReactMarkdown from "react-markdown";
+import { useCallback } from "react";
+import { erc20Contracts } from "../../contract/contract";
 
 export default function Details() {
   let { id } = useParams();
-  const { fundingContract, provider } = useContext(WalletContext);
-  const { metadata, goal, fund, token } = useStartonProject(id);
+  const { fundingContract, provider, account } = useContext(WalletContext);
+  const { metadata, goal, fund, token, owner, ongoing } = useStartonProject(id);
   const [funded, setFunded] = useState("0%");
   const [amount, setAmount] = useState(1);
   const [tokenContract, setTokenContract] = useState();
+  const isOwner =
+    account && owner && account.toLowerCase() === owner.toLowerCase();
 
   function onInputChange(event) {
     setAmount(parseInt(event.target.value));
@@ -39,7 +43,7 @@ export default function Details() {
   useEffect(() => {
     if (!goal || !fund) return;
 
-      setFunded(parseInt((fund / goal) * 100).toString() + "%");
+    setFunded(parseInt((fund / goal) * 100).toString() + "%");
   }, [goal, fund]);
 
   async function onFundButton() {
@@ -50,6 +54,12 @@ export default function Details() {
     if (!tokenContract) return;
 
     await tokenContract.approve(fundingContract.address, amount);
+  }
+
+  async function onWithdrawButton() {
+    if (!tokenContract) return;
+
+    await fundingContract.withdrawFunds(id);
   }
 
   return (
@@ -66,7 +76,7 @@ export default function Details() {
             />
           )}
         </div>
-        <h1>{metadata?.name ?? "..."}</h1>
+        <h1>{metadata?.name ?? "..."}</h1> by {owner ?? "..."}
         <div className={styles.funding}>
           <LoadingBar value={funded} />
           <div className="panel">{funded}</div>
@@ -79,11 +89,26 @@ export default function Details() {
         </div>
       </div>
       <br />
+      {isOwner && ongoing && (
+        <div className={[styles.card, "panel-shadow"].join(" ")}>
+          Congratulations ! You're project has been successfully funded, you can
+          now withdraw your funds.
+          <br />
+          <br />
+          <button onClick={onWithdrawButton}>
+            Withdraw {fund}{" "}
+            {erc20Contracts.find(({ address: a }) => a === token)?.name}
+          </button>
+        </div>
+      )}
+      {
+        ongoing !== undefined && !ongoing && <>
+          This campaign ended !
+        </>
+      }
       <br />
       <div className={[styles.card, "panel-shadow"].join(" ")}>
-        {metadata && <ReactMarkdown>
-            {metadata.description}
-        </ReactMarkdown>}
+        {metadata && <ReactMarkdown>{metadata.description}</ReactMarkdown>}
       </div>
     </Page>
   );
