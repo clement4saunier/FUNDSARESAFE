@@ -7,6 +7,14 @@
     margin-top: var(--space-larger);
 }
 
+.container h2 {
+    margin-top: 6px;
+}
+
+h1 span, h2 span {
+    color: var(--color-theme-accent);
+}
+
 .container>* {
     width: auto;
     background: radial-gradient(

@@ -20,6 +20,7 @@ header {
 header > * {
     display: flex;
     align-items: center;
+  height: var(--size-topbar);
     justify-content: center;
 }
 
@@ -40,8 +41,21 @@ header h2 {
     margin-bottom: var(--space-large);
 }
 
+.logo {
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo > img {
+    max-height: calc(var(--size-topbar) - 24px);
+    margin-right: var(--space-medium);
+    aspect-ratio: 1 / 1;
+}
+
 header h2 > a {
-    color: var(--color-theme-main);
+    color: var(--color-theme-accent);
 }
 
 .selected {
@@ -49,7 +63,7 @@ header h2 > a {
 }
 
 button.selected {
-    background-color: #00856E;
+    background-color: var(--color-theme-accent);
     transition: 0.2s;
     /* background-color: var(--color-theme-main); */
 }

@@ -2,6 +2,7 @@
   --color-background-main: #16161c;
   /*Main Background*/
   --color-theme-main: #008770;
+  --color-theme-accent: #2da9a5;
   /*Color Accent*/
   --color-theme-second: #4ec1f7;
   /*Color Accent*/
@@ -88,7 +89,7 @@ button {
   touch-action: manipulation;
   white-space: nowrap;
   color: white;
-  background-color: var(--color-theme-main);
+  background-color: var(--color-theme-accent);
   backdrop-filter: brightness(120%);
 }
 
@@ -101,19 +102,20 @@ button:active {
   transform: translateY(0px)
 }
 
+h1, h2, h3 {
+  font-family: 'Arvo'; 
+}
+
 h1 {
-  font-family: 'Share Tech Mono';
   font-size: 42pt;
   margin-block-start: 1.5em;
 }
 
 h2 {
-  font-family: 'Share Tech Mono';
   font-size: 24pt;
 }
 
 h3 {
-  font-family: 'Share Tech Mono';
   font-weight: 300;
 }
 

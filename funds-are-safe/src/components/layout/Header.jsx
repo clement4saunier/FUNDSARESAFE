@@ -32,7 +32,8 @@ export default function Header() {
         onClick={onTitleButton}
         style={{ cursor: "pointer" }}
       >
-        <h2>
+        <h2 className={styles.logo}>
+          <img alt="quickstart-logo" src="/logo192.png"/>
           <a>QUICK</a>
           STARTER
         </h2>
