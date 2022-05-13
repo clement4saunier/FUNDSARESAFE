@@ -6,6 +6,8 @@
     to {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         transform: translateY(-2px);
+        border: 1px solid;
+        border-color: var(--color-theme-main);
     }
 }
 
@@ -19,8 +21,8 @@
     border: 1px;
     background: linear-gradient(
         90deg,
-        #12282ba2 0%,
-        var(--color-theme-main) 200%
+        var(--color-background-main) -20%,
+        var(--color-theme-main) 100%
       );
 }
 
@@ -28,7 +30,7 @@
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transform: translateY(-2px);
-    animation: hoverCard 0.5s;
+    animation: hoverCard 0.3s;
     border: 1px solid;
     outline-offset: 1px;
     border-color: var(--color-theme-main);
