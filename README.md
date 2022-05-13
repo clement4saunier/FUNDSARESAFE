@@ -3,11 +3,10 @@
 
 A crowd-funding platform entirely decentralized using Ethereum (here deployed on Ropsten Network) and IPFS.
 
-### Our presentation:
+## Our presentation:
 https://docs.google.com/presentation/d/1ciqoZo3WWkPnFSLauIH6epc4yRWOiOzKGAiOnT-faJ8/edit?usp=sharing
 
----
-### Tech Stack
+## Tech Stack
 * React
 * Starton
 * Solidity
