@@ -29,7 +29,7 @@ export default function Details() {
   }
 
   useEffect(() => {
-    if (!token) return;
+    if (!token || !provider) return;
 
     setTokenContract(
       new Contract(
