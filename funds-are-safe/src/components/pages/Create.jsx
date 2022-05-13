@@ -83,7 +83,7 @@ export default function Create() {
         <span style={{ color: state === "minting" ? "#23C4AA" : "" }}>
           #3 MINT
           </span>
-          {""} YOUR PAGE <u>ON-CHAIN</u>
+          {""} YOUR PROJECT<br/> <u>ON-CHAIN</u>
         </h1>
         <button onClick={onMintButton}>Mint</button>
       </Page>
