@@ -67,8 +67,8 @@ export default function Header() {
       </div>
       <div>
         <div className="panel">{chainId && (networks.get(chainId) ?? "Unknown")}</div>
-        <div className="panel" onClick={requestAccounts}>
-          {account ? account.substring(0, 7) : "Connect Wallet"}
+        <div className="panel" style={{whiteSpace: "nowrap", cursor: "pointer"}} onClick={requestAccounts}>
+          {account ? (account.substring(0, 7) + "...") : "Connect Wallet"}
         </div>
       </div>
     </header>
