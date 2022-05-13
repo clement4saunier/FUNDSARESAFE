@@ -107,7 +107,7 @@ export default function Details() {
         </>
       }
       <br />
-      <div className={[styles.card, "panel-shadow"].join(" ")}>
+      <div className={[styles.card, styles.markdown, "panel-shadow"].join(" ")}>
         {metadata && <ReactMarkdown>{metadata.description}</ReactMarkdown>}
       </div>
     </Page>
