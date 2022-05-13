@@ -77,6 +77,9 @@ export default function Details() {
           )}
         </div>
         <h1>{metadata?.name ?? "..."}</h1> by {owner ?? "..."}
+        <br/>
+        <br/>
+        <br/>
         <div className={styles.funding}>
           <LoadingBar value={funded} />
           <div className="panel">{funded}</div>
@@ -101,11 +104,11 @@ export default function Details() {
           </button>
         </div>
       )}
-      {
-        ongoing !== undefined && !ongoing && <>
+      {ongoing !== undefined && !ongoing && (
+        <div className={[styles.card, "panel-shadow"].join(" ")}>
           This campaign ended !
-        </>
-      }
+        </div>
+      )}
       <br />
       <div className={[styles.card, styles.markdown, "panel-shadow"].join(" ")}>
         {metadata && <ReactMarkdown>{metadata.description}</ReactMarkdown>}

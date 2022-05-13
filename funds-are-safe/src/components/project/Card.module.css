@@ -1,16 +1,3 @@
-@keyframes hoverCard {
-    from {
-        box-shadow: var(--shadow-small);
-        transform: translateY(0px);
-    }
-    to {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        transform: translateY(-2px);
-        border: 1px solid;
-        border-color: var(--color-theme-main);
-    }
-}
-
 .card {
     width: 100%;
     box-shadow: var(--shadow-small);
@@ -18,22 +5,22 @@
     align-items: center;
     justify-content: space-between;
     position: center;
-    border: 1px;
     background: linear-gradient(
         90deg,
         var(--color-background-main) -20%,
         var(--color-theme-main) 100%
       );
+      border:1px black ;
 }
 
 .card:hover {
-    align-items: center;
+    /* align-items: center; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transform: translateY(-2px);
-    animation: hoverCard 0.3s;
-    border: 1px solid;
-    outline-offset: 1px;
-    border-color: var(--color-theme-main);
+    transition-duration: 300ms;
+    /* animation: hoverCard 0.3s; */
+    /* outline-offset: 1px; */
+    border:1px solid var(--color-theme-main);
 }
 
 .card h2 {
