@@ -16,7 +16,7 @@ import { erc20Contracts } from "../../contract/contract";
 
 export default function Details() {
   let { id } = useParams();
-  const { fundingContract, provider, account } = useContext(WalletContext);
+  const { fundingContract, provider, account, chainId } = useContext(WalletContext);
   const { metadata, goal, fund, token, owner, ongoing } = useStartonProject(id);
   const [funded, setFunded] = useState("0%");
   const [amount, setAmount] = useState(1);
@@ -85,14 +85,14 @@ export default function Details() {
           <div className="panel">{funded}</div>
         </div>
         <br />
-        <div className={styles.fundIt}>
+        {account ? (chainId === 3 ? <div className={styles.fundIt}>
           <button onClick={onFundButton}>Fund it!</button>
           <button onClick={onApproveButton}>Approve</button>
           <input onChange={onInputChange} placeholder="amount"></input>
-        </div>
+        </div> : <div className={styles.fundIt}>Connect to Ropsten Network to fund this project</div>) : <div className={styles.fundIt}>Connect your wallet to fund</div>}
       </div>
       <br />
-      {isOwner && ongoing && (
+      {isOwner && !ongoing && (
         <div className={[styles.card, "panel-shadow"].join(" ")}>
           Congratulations ! You're project has been successfully funded, you can
           now withdraw your funds.
