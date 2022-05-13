@@ -58,7 +58,7 @@ export default function Create() {
           onChange={(e) => setMarkdown(e.target.value)}
           placeholder="The details of your project, why it'll be worht it (full markdown)"
         />
-        <button onClick={() => setState("uploading")}>
+        <button onClick={() => setState("uploading")} style={{marginTop: "var(--space-large"}}>
           Confirm it's correct
         </button>
         <h1>
