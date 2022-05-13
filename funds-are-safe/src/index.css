@@ -18,7 +18,7 @@
   --radius-medium: 8px;
   --radius-large: 12px;
   --size-topbar: 70px;
-  --shadow-small: rgba(0, 0, 0, 0.56) 0px 6px 24px 4px
+  --shadow-small: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -42,8 +42,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background-main);
   color: var(--color-text-main);
-  background: radial-gradient(
-    at 50% 20%,
+  background: linear-gradient(
+    0deg,
     #12282B 0%,
     var(--color-background-main) 100%
   );
@@ -146,5 +146,5 @@ footer {
   padding-top: var(--space-larger);
   padding-bottom: var(--space-larger);
   margin-top: var(--space-larger);
-  color: var(--color-text-second);
+  color: var(white);
 }
